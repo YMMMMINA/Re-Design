@@ -1,0 +1,299 @@
+@charset "utf-8";
+@font-face{
+    font-family: Stranger;
+    src:url('Font/Stranger.ttf');
+}
+@font-face{
+    font-family: Cabin;
+    src:url('Font/Cabin-Italic.ttf');
+}
+*{
+    margin:0 auto;
+    padding:0;
+    list-style:none;
+    font-family:"맑은 고딕";
+    box-sizing: border-box;
+}
+a{
+    color:inherit;
+    text-decoration:none;
+}
+body,html{
+    min-width:1920px; 
+    background-color: #000; 
+    color:#fff;
+}
+.main{
+    width:100%
+}
+.main .bg img{
+    width:100%;
+    display:block;
+    margin: 0 auto;
+    position: relative;
+}
+.menu {
+    width:1200px;
+    margin:0 435px;
+}
+.menu ul{
+    position: absolute;
+    top:0;
+    text-align: center;
+}
+.menu li{
+    float:left;
+    width:150px;
+    text-align: center;
+    display: block;
+    line-height:100px;
+    height: 100px;
+}
+.menu li a{
+    display:block;
+    padding:5px 0;
+    color:#fff;
+    font-size:30px;
+    font-family: Stranger;
+}
+.menu li img{
+    width:85%;
+    vertical-align: middle;
+}
+.menu li a:hover{
+    transition:all 0.5s;
+    color: rgba(117, 0, 0, 10);
+}
+.main-content{
+    position: absolute;
+    top:35%;
+    left:45%;
+    text-align: center;
+}
+.main-content h1{
+    color:#6f0000;
+    font-size:60px;
+    font-family: Stranger;
+    font-weight: lighter;
+    line-height: 5px;
+}
+.main-content h2{
+    font-size:150px;
+    font-family: Stranger;
+    font-weight: lighter;
+}
+.main-content h3{
+    font-size:80px;
+    font-family: Stranger;
+    font-weight: lighter;
+    margin-top:-30px;
+}
+.main-content h4{
+    font-size:150px;
+    font-family: Stranger;
+    font-weight: lighter;
+    margin-top:-30px;
+}
+.main-content p{
+    margin-top:30px;
+    font-size:15px;
+    padding:5px 10px;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: lighter;
+}
+.main-content p a{
+    font-family: 'Nanum Gothic', sans-serif;
+    background-color:#6f0000;
+    padding:5px 30px;
+}
+.main-content p a:hover{
+    background-color: rgba(117, 0, 0, 0.8);
+    transition:all 0.5s;
+}
+.mainsub{
+    position:absolute;
+    top:90%;
+    left:50%;
+    text-align: center;
+}
+.mainsub img{
+    width:30%;
+}
+.mainsub h6{
+    font-size:12px;
+    font-weight: 100;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+.mainsub hr{
+    width: 1px; 
+    height: 200px; 
+    margin:0px auto;
+    margin-top:10px;
+}
+.main:after{
+    content: "";
+    display: block;
+    clear:both;
+}
+.about{
+    width:100%;
+    position: relative;
+}
+.about .bg2 img{
+    width:100%;
+    display:block;
+    margin: 0 auto;
+}
+.about-content{
+    position: absolute;
+    left: 20%;
+    top:30%;
+    text-align:left;
+}
+.about-content h1{
+    font-family: Stranger;
+    font-size:100px;
+    font-weight: normal;
+}
+.about-content h1 span{
+    font-family: Stranger;
+    font-size:100px;
+    font-weight: normal;
+    color:#ff0000;
+    margin-left:-10px;
+}
+.about-content h6{
+    font-size:16px;
+    line-height: 1.5em;
+    font-weight: lighter;
+    font-family: Cabin;
+}
+.about-content p{
+    
+    float: left;
+    margin-top:30px;
+}
+.about-content p a{
+    background-color: #6f0000;
+    padding:5px 50px;
+}
+.about-content p a:hover{
+    background-color: rgba(117, 0, 0, 0.8);
+    transition:all 0.5s;
+}
+.about-content:after{
+    content:"";
+    display:block;
+    clear: both;
+}
+.chapters{
+    width:100%;
+    margin-top:-150px;
+}
+.chapters h1{
+    font-size:100px;
+    text-align: center;
+    font-family: Stranger;
+    font-weight: normal;
+    color:#ff0000;
+}
+.chapters-content{
+    text-align: center;
+    width:1600px;
+    height: 500px;
+    line-height: 500px;
+}
+.chapters-content a:hover{
+    opacity: 0.8;
+    transition:all 0.5s;
+}
+.chapters-content img{
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: middle;
+    padding:20px;
+}
+.chapters:after{
+    content:"";
+    display:block;
+    clear:both;
+}
+.gallery{
+    width:100%;
+    position: relative;
+}
+.gallery .bg3 img{
+    width:100%;
+    display:block;
+    margin: 0 auto;
+}
+.gallery-content{
+    position: absolute;
+    top:18%;
+    left:40%;
+}
+.gallery-content h1{
+    text-align: center;
+    margin-bottom:50px;
+    font-family: Stranger;
+    font-size:100px;
+    font-weight: normal;
+}
+.gallery-content h1 span{
+    font-family: Stranger;
+    font-size:100px;
+    font-weight: normal;
+    color:#ff0000;
+}
+.gallery-content a:hover{
+    opacity: 0.7;
+    transition:all 0.5s;
+}
+.gallery:after{
+    content:"";
+    display: block;
+    clear:both;
+}
+.sns-menu{
+    width:1600px;
+}
+.sns-menu ul{
+    margin: 0 400px;
+    height: 60px;
+    line-height: 60px;;
+}
+.sns-menu li{
+    float:left;
+    width:100px;
+    text-align: center;
+}
+.sns-menu li img{
+    width:30%;
+    vertical-align: middle;
+}
+.sns-menu li a {
+    padding:10px;
+}
+.sns-menu li a:hover{
+    opacity: 0.8;
+    transition:all 0.5s;
+}
+.sns-menu:after{
+    content:"";
+    display:block;
+    clear:both;
+}
+.footer hr{
+    width:1600px;
+    text-align: center;
+    margin:50px auto;
+}
+.footer p{
+    text-align: center;
+    font-size:12px;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+::selection {
+    color:#fff;;
+    background-color: #6f0000;
+  } 

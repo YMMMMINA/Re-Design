@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
+    <link href="css.css" type="text/css" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick-theme.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" ></script>
+
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script src='js/js.js'></script>
+
+    <!-- gsap(애니메이션 라이브러리, 스크롤매직이 내부적으로 이 녀석을 쓴다.) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"></script>
+
+    <!-- 스크롤 매직 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+
+    <!-- 디버그용 인디케이터, 실전에선 필요없음 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.js"></script>
+
+    <!-- gsap 용 플러그인 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js"></script>
+
+    <title>PUBG</title>
+</head>
+<body>
+    <div class="top-btn">
+        <i class="fa fa-chevron-circle-up fa-3x"></i>
+    </div>
+    <div class="sns-fixed">
+        <i class="fa fa-facebook fa-2x"></i>
+        <i class="fa fa-twitter fa-2x"></i>
+        <i class="fa fa-youtube fa-2x"></i>
+        <i class="fa fa-instagram fa-2x"></i>
+    </div>
+    <div class="top-bar-wrap con">
+        <div class="logo-box">
+            <a href="#"><img src="image/logo.png" alt="logo img"></a>
+        </div>
+        <div class="menu-left cell">
+            <ul class="row">
+                <li class="cell"><a href="#">PRE-REGISTER</a></li>
+                <li class="cell"><a href="#">SECOND ALPHA TEST</a></li>
+                <li class="cell"><a href="#">NEWS</a></li>
+                <li class="cell"><a href="#">GUIDE</a></li>
+                <li class="cell"><a href="#">MEDIA</a></li>
+                <li class="cell"><a href="#">COMMUNITY</a></li>
+            </ul>
+        </div>
+        <div class="menu-right cell-r">
+            <ul class="row">
+                <li class="cell"><a href="#"><i class="fa fa-share-alt fa-2x"></i></a></li>
+                <li class="cell"><a href="#"><i class="fa fa-globe fa-2x"></i></a></li>
+                <li class="cell"><a href="#">SECOND ALPHA TESTER SELECTION STATUS</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="main-visual con">
+        <div class="text-box">
+                <h1>BEYOND BATTLE ROYALE</h1>
+                <h2>Developed by PUBG STUDIOS</h2>
+                <div class="txt-box">
+                    <p>SECOND ALPHA TESTER SELECTION STATUS  <i class="fa fa-angle-right "></i></p>
+                </div>
+                <div class="line"></div>
+        </div>
+        <div class="video">
+            <video autoplay loop muted width="100%">
+                <source src="image/new_state_video.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+    <div class="app-box con2 row">
+        <div class="video2 cell">
+            <video autoplay loop muted width="100%" height="100%">
+                <source src="image/pre_register_benefits.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="app-box-con cell">
+            <div class="app-info">
+                <p>PRE-REGISTER NOW AND GET</p>
+                <span>EXCLUSIVE<br>
+                    BENEFITS</span>
+                <p class="p01">Get a Limited Vehicle Skin (Permanent) for pre-registering</p>
+                <p class="p02">February 25, 2021 - Until official release</p>
+                <div class="app-btn">
+                    <a href="#"><img src="image/btn_apple.svg" width="174px" height="59px" alt="App Store"></a>
+                    <a href="#"><img src="image/btn_google.png" width="191px" height="59px" alt="Google Store"></a>
+                </div>
+                <p class="p03">Apple and the Apple logo are trademarks of Apple Inc., registered in the U.S. and other countries.<br>
+                    App Store is a service mark of Apple Inc.<br>
+                    Google Play and the Google Play logo are trademarks of Google LLC.</p>
+            </div>
+        </div>
+    </div>
+    <div class="news-content con2">
+        <div class="news-title row">
+            <p class="cell">NEWS</p>
+            <i class="fa fa-plus fa-2x cell-r"></i>
+        </div>
+        <div class="news-cons row">
+            <div class="news-section cell">
+                <a href="#">
+                    <div class="news-img-box">
+                    </div>
+                    <div id="date">
+                        <script>let today = new Date();   
+
+                            let year = today.getFullYear(); // 년도
+                            let month = today.getMonth() + 1;  // 월
+                            let date = today.getDate()-2;  // 날짜
+                            let day = today.getDay();  // 요일
+                            
+                            document.write(year + '/' + month + '/' + date)
+                            document.write('<br>');
+
+                            document.getElementById('date').style.color='#9c9c9c';
+                        </script>
+                    </div>
+                    <p>ANNOUNCEMENTS</p>
+                    <p class="p02">It's Time to Drop into PUBG: NEW STATE's Second Alpha Test!</p>
+                </a>
+            </div>
+            <div class="news-section cell">
+                <a href="#">
+                    <div class="news-img-box">
+                    </div>
+                    <div class="date">
+                        2021/08/25
+                    </div>
+                    <p>ANNOUNCEMENTS</p>
+                    <p class="p02">It's Time to Drop into PUBG: NEW STATE's Second Alpha Test!</p>
+                </a>
+            </div>
+            <div class="news-section cell">
+                <a href="#">
+                    <div class="news-img-box">
+                    </div>
+                    <div class="date">
+                        2021/08/23
+                    </div>
+                    <p>ANNOUNCEMENTS</p>
+                    <p class="p02">It's Time to Drop into PUBG: NEW STATE's Second Alpha Test!</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="media-wrap">
+        <div class="media-content con2">
+            <p class="title">MEDIA</p>
+            <div class="slider">
+                <div class="content content1">
+                <img src="image/slide01.jpg" alt="slider01">
+                </div>
+                <div class="content content2">
+                <img src="image/slide02.jpg" alt="slider02"></div>
+                <div class="content content3">
+                <img src="image/slide03.png" alt="slider03"></div>
+                <div class="content content4">
+                <img src="image/slide04.jpg" alt="slider04"></div>
+            </div>
+        </div>
+        <div class="green-bg con3"><!--★위치가 모니터 크기에 따라 달라짐★-->
+            <p>PUBg : NEW STATE MEDIA</p>
+        </div>
+        <div class="sns-content con2">
+            <p class="title">COMMUNITY</p>
+            <div class="sns-box">
+                <div class="sns-fc">
+                    <i class="fa fa-facebook fa-3x"></i>
+                    <p>FACEBOOK</p>
+                    <a href="#"><p class="sns-btn">LIKE</p></a>
+                </div>
+            </div>
+            <div class="sns-box">
+                <div class="sns-tw">
+                    <i class="fa fa-twitter fa-3x"></i>
+                    <p>TWITTER</p>
+                    <a href="#"><p class="sns-btn">FOLLOW</p></a>
+                </div>
+            </div>
+            <div class="sns-box">
+                <div class="sns-yt">
+                    <i class="fa fa-youtube fa-3x"></i>
+                    <p>YOUTUBE</p>
+                    <a href="#"><p class="sns-btn">SUBSCRIBE</p></a>
+                </div>
+            </div>
+            <div class="sns-box">
+                <div class="sns-insta">
+                    <i class="fa fa-instagram fa-3x"></i>
+                    <p>INSTAGRAM</p>
+                    <a href="#"><p class="sns-btn">FOLLOW</p></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row"></div>
+    <div class="footer con3">
+        <div class="footer-con con4 row">
+            <img class="footer-left-img cell" src="image/footer_01.png" alt="">
+            <div class="footer-txt cell">
+                <ul class="row">
+                    <li class="cell"><a href="#">Terms of Service</a></li>
+                    <li class="cell font"><a href="#"><b>Privacy Policy</b></a></li>
+                    <li class="cell"><a href="#">Rules of Conduct</a></li>
+                    <li class="cell font"><a href="#"><b>Privacy Notice for California Residents</b></a></li>
+                </ul>
+                <p class="p-f1">Business Inquiries: <span class="font2"><a href="#"><u>PUBG_INQUIRY@PUBG.COM</u></a></span></p>
+                <p class="p-f2">© 2021 KRAFTON, INC.<br>
+                    PUBG IS A REGISTERED TRADEMARK OR SERVICE MARK OF KRAFTON, INC.</p>
+            </div>
+            <img class="footer-right-img cell-r" src="image/footer_02.jpg" alt="">
+        </div>
+    </div>
+</body>
+</html>

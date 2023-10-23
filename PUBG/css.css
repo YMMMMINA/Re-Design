@@ -1,0 +1,914 @@
+@charset "utf-8";
+/* 노멀라이징 */
+* {
+    padding:0;
+    margin:0;
+  }
+  ul,li{
+    list-style:none;
+  }
+  a{
+    color:inherit;
+    text-decoration:none;
+  }
+  /* 라이브러리 */
+  .cell{
+    float:left;
+  }
+  .cell-r{
+      float: right;
+  }
+  .row::after{
+    clear:both;
+    content: "";
+    display: block;
+  }
+  .con{
+    width:90%;
+    margin:0 auto;
+  }
+  .con2{
+    width:70%;
+    margin:0 auto;
+  }
+
+  .con3{
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .con4{
+    width: 70%;
+    margin:0 auto;
+  }
+
+/* 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@font-face {
+  font-family: PUBG_New_State;
+  src: url(font/PUBG_New-State_Regular.otf);
+}
+@font-face {
+  font-family: Refrigerator_bold;
+  src: url(font/Refrigerator\ Deluxe\ Bold.otf);
+}
+@font-face {
+  font-family: Refrigerator_deluxe;
+  src: url(font/Refrigerator\ Deluxe.otf);
+}
+@font-face {
+  font-family: Refrigerator_Extrabold;
+  src: url(font/Refrigerator\ Deluxe\ Extrabold.otf);
+}
+
+.digit {
+  opacity: 0;
+  -webkit-transform: translateX(-20px);
+     -moz-transform: translateX(-20px);
+      -ms-transform: translateX(-20px);
+       -o-transform: translateX(-20px);
+          transform: translateX(-20px);
+  -webkit-transition: all 1.6s ease-out;
+     -moz-transition: all 1.6s ease-out;
+      -ms-transition: all 1.6s ease-out;
+       -o-transition: all 1.6s ease-out;
+          transition: all 1.6s ease-out;
+}
+
+.digit.visible {
+  opacity: 1;
+  -webkit-transform: none;
+     -moz-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
+}
+/* 위로 버튼 */
+
+.top-btn{
+  position:fixed;
+  bottom: 50px ;
+  right: 50px ;
+  width: 100px ;
+  text-align:center;
+  border-radius: 20px ;
+  cursor: pointer ;
+  transition: all 0.3s ;
+  z-index: 1000;
+  opacity:0;
+	visibility:hidden;
+  color: #ddd;
+}
+
+.top-btn:hover{
+  color: #000;
+}
+
+.top-btn.active{
+	opacity:1;
+	visibility:visible;
+}
+
+/* 우측 sns */
+
+.sns-fixed{
+  position:fixed;
+  transform: translate(-50%,0%);
+  top: 50% ;
+  right:70px ;
+  width: 100px ;
+  height: 300px;
+  text-align:center;
+  cursor: pointer ;
+  z-index: 1000;
+  padding:20px 0;
+  box-sizing: border-box;
+  opacity:0;
+	visibility:hidden;
+  transition: all 0.2s;
+}
+
+.sns-fixed.active{
+	opacity:1;
+	visibility:visible;
+}
+
+.scroll_ac{
+  background-color: #fff;
+  color:black;
+  border: 1px solid #000;
+}
+
+.sns-fixed .fa-facebook{
+  width: 56px;
+  height: 56px;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  margin-bottom:10px;
+  color: white;
+  padding-top: 12px;
+  padding-left:-5px;
+  box-sizing: border-box;
+}
+
+.sns-fixed .fa-facebook:hover{
+  background-color: white;
+  color: black;
+}
+
+.sns-fixed .fa-twitter{
+  width: 56px;
+  height: 56px;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  margin-bottom:10px;
+  color: white;
+  padding-top: 12px;
+  padding-left:-5px;
+  box-sizing: border-box;
+}
+
+.sns-fixed .fa-twitter:hover{
+  background-color: white;
+  color: black;
+}
+
+.sns-fixed .fa-youtube{
+  width: 56px;
+  height: 56px;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  margin-bottom:10px;
+  color: white;
+  padding-top: 12px;
+  box-sizing: border-box;
+}
+
+.sns-fixed .fa-youtube:hover{
+  background-color: white;
+  color: black;
+}
+
+.sns-fixed .fa-instagram{
+  width: 56px;
+  height: 56px;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  margin-bottom:10px;
+  color: white;
+  padding-top: 12px;
+  padding-left:-5px;
+  box-sizing: border-box;
+}
+
+.sns-fixed .fa-instagram:hover{
+  background-color: white;
+  color: black;
+}
+
+/* SNS아이콘 이미지 사용하여 위치사용 
+.sns-fixed .fa-twitter1{
+  width: 56px;
+  height: 56px;
+  background: url(image/icons_sns_vertical.408fb87.png) no-repeat -2px -206px;
+  margin-bottom:10px;
+}
+
+.sns-fixed .fa-twitter1:hover{
+  background: url(image/icons_sns_vertical.408fb87.png) no-repeat -63px -206px;
+}
+
+.sns-fixed .fa-youtube1{
+  width: 56px;
+  height: 56px;
+  background: url(image/icons_sns_vertical.408fb87.png) no-repeat -2px -274px;
+  margin-bottom:10px;
+}
+
+.sns-fixed .fa-youtube1:hover{
+  background: url(image/icons_sns_vertical.408fb87.png) no-repeat -63px -274px;
+}
+
+.sns-fixed .fa-instagram1{
+  width: 56px;
+  height: 56px;
+  background: url(image/icons_sns_vertical.408fb87.png) no-repeat -2px -341px;
+  color: #000;
+}
+
+.sns-fixed .fa-instagram1:hover{
+  background: url(image/icons_sns_vertical.408fb87.png) no-repeat -63px -341px;
+}
+*/
+
+/* 상단바 시작 */
+
+.top-bar-wrap{
+  height: 140px;
+  z-index: 999;
+  transition: all 0.6s;
+  margin: 0 auto; 
+  min-width: 90%; 
+}
+
+.fixed{
+  position: fixed;
+  width:90%;
+  background-color: #fff;
+  margin-left:5%;
+}
+
+/* 로고 */
+.top-bar-wrap .logo-box{
+  width: 150px;
+  height: 76px;
+  float: left;
+  padding-top:32px;
+  box-sizing: border-box;
+  margin-right:30px;
+}
+/* 왼쪽 메뉴 */
+.top-bar-wrap .menu-left{
+  width:700px;
+  height: 140px;
+}
+
+.top-bar-wrap .menu-left ul li{
+  font-size: 1.1em;
+  color:black;
+  text-align:center;
+  margin-right:15px;
+  padding:70px 10px;
+  box-sizing: border-box;
+  font-family: Refrigerator_deluxe;
+}
+.top-bar-wrap .menu-right ul li:nth-child(1){
+  border-right: 1px solid #ddd;
+
+}
+/* 오른쪽 메뉴 */
+.top-bar-wrap .menu-right{
+  width:500px;
+  height: 140px;
+  box-sizing: border-box;
+  border-left: 1px solid #ddd;
+}
+
+.top-bar-wrap .menu-right ul li{
+  font-size: 1.1em;
+  color:black;
+  text-align:center;
+  width:20%;
+  height: 140px;
+  padding:0 10px;
+  box-sizing: border-box;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-bar-wrap .menu-right ul li:nth-child(1){
+  border-right: 1px solid #ddd;
+
+}
+
+.top-bar-wrap .menu-right ul li:last-child{
+  width:60%;
+  background-color: #10eba4;
+  font-family: Refrigerator_bold;
+}
+.top-bar-wrap .menu-right ul li:hover{
+  background-color:#242820;
+  color:#fff;
+}
+.top-bar-wrap .menu-right ul li:last-child:hover{
+  color: #10eba4;
+  background-color: #000;
+  border:5px solid #10eba4;
+  box-sizing: border-box;
+}
+/* 상단바 끝 */
+/* 동영상 + 텍스트 메인비주얼 시작 */
+.main-visual .text-box{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,0);
+  z-index: 1;
+  text-align: center;
+  line-height: 80px;
+}
+
+.main-visual .text-box h1{
+  font-family: PUBG_New_State;
+  font-size:7em;
+  color:white;
+  font-weight: 400;
+}
+
+.main-visual .text-box h2{
+  font-family: Refrigerator_deluxe;
+  font-size:40px;
+  color:white;
+}
+
+.main-visual .text-box .txt-box{
+  width: 500px;
+  padding : 0 15px;
+  margin:0 auto;
+  height: 40px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+.main-visual .text-box .txt-box p{
+  font-family: Refrigerator_Extrabold;
+  font-size:1.7em;
+  color:black;
+  background-color: #10eba4;
+  box-sizing: border-box;
+  width: 500px;
+  transition: all 0.5s;
+}
+
+.main-visual .text-box .txt-box p:hover{
+  color: #10eba4;
+  background-color: #000;
+  border:5px solid #10eba4;
+  box-sizing: border-box;
+}
+
+.main-visual .text-box .line{
+  width:520px;
+  height:80px;
+  border: 1px solid #10eba4;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,-90%);
+  margin: 0 auto;
+  z-index: -1;
+}
+/* 동영상 + 텍스트 메인비주얼 끝 */
+
+/* 앱설치? + 비디오 앱설치 설명 시작 */
+  /* 비디오 */
+.video{
+  position: relative;
+}
+
+.app-box{
+  margin-top:200px;
+}
+.video2{
+  margin-right: 130px;
+}
+.app-box-con{
+  width:40%;
+  height: 640px;
+}
+
+.app-box-con .app-info{
+  padding-top:30px;
+  box-sizing: border-box;
+}
+
+.app-box-con .app-info p{
+  font-family: Refrigerator_deluxe;
+  font-size: 26px;
+  letter-spacing: 2px;
+  margin-bottom:30px;
+}
+
+.app-box-con .app-info span{
+  font-size:6.5em;
+  font-family: PUBG_New_State;
+  line-height: 100px;
+}
+
+.app-box-con .app-info .p01{
+  font-size: 20px;
+  font-family: Refrigerator_deluxe;
+  letter-spacing: 0px;
+  margin-bottom:15px;
+}
+
+.app-box-con .app-info .p02{
+  font-family: Refrigerator_deluxe;
+  color: #10eba4;
+  font-size: 24px;
+  letter-spacing: 2px;
+  margin-bottom:100px;
+}
+
+.app-box-con .app-info .p03{
+  font-size:8px;
+  color:#7c7c7c;
+  font-family: 'Roboto', sans-serif;
+  font-weight:bold ;
+  letter-spacing: 0;
+}
+
+.app-box-con .app-info .app-btn{
+  margin-bottom:30px;
+}
+/* 앱설치? + 비디오 앱설치 설명 끝 */
+/* News 시작 */
+.news-content{
+  margin-top:200px;
+}
+
+.news-title{
+  margin-bottom:20px; 
+}
+
+.news-title p{
+  font-family: PUBG_New_State;
+  font-size:50px;
+} 
+
+.news-title .fa{
+  padding:10px 0;
+  color: #ddd;
+  transition: all 0.3s;
+}
+
+.news-title .fa:hover{
+  padding:10px 0;
+  color: #000;
+}
+
+.news-content .news-section{
+  width: 32%;
+  margin-right:2%;
+  height: auto;
+}
+
+.news-content .news-section:last-child{
+  margin-right: 0;
+}
+
+.news-content .news-section .news-img-box{
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  transition: all 0.4s;
+  margin-bottom: 15px;
+}
+
+/* News Section 이미지 첨부 */
+.news-content .news-section:nth-child(1) .news-img-box{
+  background-image: url(image/news01.jpg);
+  background-position:center;
+	background-repeat:no-repeat;
+	background-size:auto 120%;
+}
+
+.news-content .news-section:nth-child(2) .news-img-box{
+  background-image: url(image/news02.jpg);
+  background-position:center;
+	background-repeat:no-repeat;
+	background-size:auto 120%;
+}
+
+.news-content .news-section:nth-child(3) .news-img-box{
+  background-image: url(image/news03.jpg);
+  background-position:center;
+	background-repeat:no-repeat;
+	background-size:auto 120%;
+}
+
+.news-content .news-section a:hover .news-img-box{
+  background-size:auto 130%;
+}
+
+.news-content .news-section #date{
+  float: left;
+  font-size: 12px;
+  margin-right: 8px;
+}
+
+.news-content .news-section .date{
+  float: left;
+  font-size: 12px;
+  margin-right: 8px;
+  color:#9c9c9c;
+}
+
+.news-content .news-section p{
+  font-size: 12px;
+  font-weight: bold;
+  color:orange;
+}
+
+.news-content .news-section .p02{
+  font-family: Refrigerator_deluxe;
+  font-size:20px;
+  color: black;
+  font-weight: 100;
+  margin-top:20px;
+}
+
+/* News 끝 */
+
+/* Media 시작 */
+
+.media-wrap{
+  position:relative;
+}
+
+.media-content{
+  margin-top:200px;
+  width: 70%;
+  height: 1000px;
+  position:relative;
+}
+
+.title{
+  font-family: PUBG_New_State;
+  font-size:50px;
+  margin-bottom:20px;
+} 
+/* 슬라이드 */
+.slider{
+  margin:0 auto;
+  max-width: 100% ;
+  width:100%;
+}
+.content > img{
+  width:100%;
+}
+
+/* arrow 위치 변경 */
+.slider .slick-prev {
+  left: -45px ;
+  z-index: 8 ;
+}
+.slider .slick-next {
+  right: -45px ;
+  z-index: 8 ;
+}
+
+/* arrow 색상 변경 */
+.slider .slick-next:before,
+.slider .slick-prev:before{
+  color: black ;
+}
+
+/* dots 위치 변경 */
+.slider .slick-dots {
+  bottom: -40px ;
+  z-index: 8 ;
+}
+
+/* dots 색상 변경 */
+.slider .slick-dots > li button:before{
+  color: #000 ;
+}
+
+/* 활성화된 dots 색상 변경 */
+.slider .slick-dots li.slick-active button:before{
+  color: #fff ;
+}
+/* 슬라이드 끝 */
+
+/* 초록 배경 상자 ★위치가 모니터 크기에 따라 달라짐★*/
+.green-bg{
+  background-color: #111d19;
+  position:absolute;
+  top:35%;
+  height: 65%;
+  z-index: -1;
+}
+
+.green-bg p{
+  text-align: center;
+  font-size: 250px;
+  margin-top:80px;
+  font-family: PUBG_New_State;
+  color:#111d19;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px #333;
+
+}
+/* ----- */
+
+.sns-content{
+  margin-top:150px;
+  height: 500px;
+}
+.sns-content .title{
+  color: #fff;
+  
+}
+
+.sns-content .sns-box{
+  width: 24%;
+  margin-right:1.333%;
+  height: auto;
+  background: blue;
+  float: left;
+  text-align: center;
+  height: 250px;
+}
+.sns-content .sns-box:last-child{
+  margin-right: 0;
+}
+
+
+/* 페이스북 설정 */
+.sns-content .sns-box .sns-fc{
+  padding-top:30px;
+  box-sizing: border-box;
+}
+.sns-content .sns-box .sns-fc{
+  transition: all 0.5s;
+  height: 250px;
+  background:#007aff;
+}
+
+.sns-content .sns-box .sns-fc .fa{
+  color: #fff;
+  margin-bottom: 20px;
+}
+.sns-content .sns-box .sns-fc p{
+  font-size:17px;
+  font-family: Refrigerator_deluxe;
+  font-weight: 0;
+  color: white;
+}
+
+.sns-content .sns-box .sns-fc .sns-btn{
+  width: 150px;
+  height: 50px;
+  border: 1px solid #fff;
+  margin: 0 auto;
+  margin-top:40px;
+  line-height: 50px;
+  color: #fff;
+  font-size:25px
+}
+.sns-content .sns-box .sns-fc:hover{
+  background: #fff;
+}
+.sns-content .sns-box .sns-fc:hover .fa{
+  color:#007aff;
+}
+.sns-content .sns-box .sns-fc:hover p{
+  color:#007aff;
+}
+.sns-content .sns-box .sns-fc:hover .sns-btn{
+  color:#fff;
+  background:#007aff;
+}
+
+/* 트위터 설정 */
+.sns-content .sns-box .sns-tw{
+  padding-top:30px;
+  box-sizing: border-box;
+}
+.sns-content .sns-box .sns-tw{
+  transition: all 0.5s;
+  height: 250px;
+  background:#2ab0e5;
+}
+
+.sns-content .sns-box .sns-tw .fa{
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.sns-content .sns-box .sns-tw p{
+  font-size:17px;
+  font-family: Refrigerator_deluxe;
+  font-weight: 0;
+  color: white;
+}
+
+.sns-content .sns-box .sns-tw .sns-btn{
+  width: 150px;
+  height: 50px;
+  border: 1px solid #fff;
+  margin: 0 auto;
+  margin-top:40px;
+  line-height: 50px;
+  color: #fff;
+  font-size:25px
+}
+
+.sns-content .sns-box .sns-tw:hover{
+  background: #fff;
+}
+
+.sns-content .sns-box .sns-tw:hover .fa{
+  color:#2ab0e5;
+}
+
+.sns-content .sns-box .sns-tw:hover p{
+  color:#2ab0e5;
+}
+
+.sns-content .sns-box .sns-tw:hover .sns-btn{
+  color:#fff;
+  background:#2ab0e5;
+}
+/* 유튜브 설정 */
+.sns-content .sns-box .sns-yt{
+  padding-top:30px;
+  box-sizing: border-box;
+}
+.sns-content .sns-box .sns-yt{
+  transition: all 0.5s;
+  height: 250px;
+  background:#ff0000;
+}
+
+.sns-content .sns-box .sns-yt .fa{
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.sns-content .sns-box .sns-yt p{
+  font-size:17px;
+  font-family: Refrigerator_deluxe;
+  font-weight: 0;
+  color: white;
+}
+
+.sns-content .sns-box .sns-yt .sns-btn{
+  width: 150px;
+  height: 50px;
+  border: 1px solid #fff;
+  margin: 0 auto;
+  margin-top:40px;
+  line-height: 50px;
+  color: #fff;
+  font-size:25px
+}
+
+.sns-content .sns-box .sns-yt:hover{
+  background: #fff;
+}
+
+.sns-content .sns-box .sns-yt:hover .fa{
+  color:#ff0000;
+}
+
+.sns-content .sns-box .sns-yt:hover p{
+  color:#ff0000;
+}
+
+.sns-content .sns-box .sns-yt:hover .sns-btn{
+  color:#fff;
+  background:#ff0000;
+}
+
+/* 인스타 설정 */
+.sns-content .sns-box .sns-insta{
+  padding-top:30px;
+  box-sizing: border-box;
+}
+
+.sns-content .sns-box .sns-insta{
+  transition: all 0.5s;
+  height: 250px;
+  background: linear-gradient(173deg,#836bd9,#a8026f,#e14633,#fcbf48);
+}
+
+.sns-content .sns-box .sns-insta .fa{
+  color: #fff;
+  margin-bottom: 20px;
+}
+.sns-content .sns-box .sns-insta p{
+  font-size:17px;
+  font-family: Refrigerator_deluxe;
+  font-weight: 0;
+  color: white;
+}
+
+.sns-content .sns-box .sns-insta .sns-btn{
+  width: 150px;
+  height: 50px;
+  border: 1px solid #fff;
+  margin: 0 auto;
+  margin-top:40px;
+  line-height: 50px;
+  color: #fff;
+  font-size:25px
+}
+
+.sns-content .sns-box .sns-insta:hover{
+  background: #fff;
+}
+
+.sns-content .sns-box .sns-insta:hover .fa{
+  color:#a8026f;
+}
+
+.sns-content .sns-box .sns-insta:hover p{
+  color:#a8026f;
+}
+
+.sns-content .sns-box .sns-insta:hover .sns-btn{
+  color:#fff;
+  background: linear-gradient(173deg,#836bd9,#a8026f,#e14633,#fcbf48);
+}
+
+
+/* footer 시작*/
+.footer{
+  width: 100%;
+  background: #000;
+  height: 200px;
+}
+
+
+.footer .footer-left-img{
+  padding-top:70px;
+  box-sizing:border-box;
+  margin-right:50px;
+}
+
+.footer .footer-right-img{
+  padding-top:50px;
+  box-sizing:border-box;
+}
+
+.footer .footer-txt{
+  color:#fff;
+  font-size:12px;
+  padding-top:45px;
+}
+
+.footer .footer-txt .font{
+  font-family: Refrigerator_deluxe;
+}
+
+.footer .footer-txt .font2{
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+}
+
+.footer .footer-txt ul{
+  margin-bottom:20px;
+}
+
+.footer .footer-txt ul li{
+  margin-right: 20px;
+}
+
+.footer .footer-txt .p-f1{
+  margin-bottom:20px;
+  font-size:13px;
+  font-family: Refrigerator_deluxe;
+  color:#838383;
+}
+
+.footer .footer-txt .p-f2{
+  font-size:10px;
+  color:#838383;
+}
+
